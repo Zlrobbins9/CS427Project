@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -38,9 +38,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 738
+    x: 404
     y: 0
-    width: 425
+    width: 759
     height: 503
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -70,10 +70,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 797
-  m_MinSize: {x: 887, y: 494}
-  m_MaxSize: {x: 16012, y: 14044}
+  m_MinSize: {x: 879, y: 494}
+  m_MaxSize: {x: 16004, y: 14044}
   vertical: 0
-  controlID: 41
+  controlID: 13
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -117,7 +117,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 202
+    width: 200
     height: 503
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -241,10 +241,10 @@ MonoBehaviour:
     y: 0
     width: 1163
     height: 797
-  m_MinSize: {x: 610, y: 494}
-  m_MaxSize: {x: 12010, y: 14044}
+  m_MinSize: {x: 604, y: 494}
+  m_MaxSize: {x: 12004, y: 14044}
   vertical: 1
-  controlID: 42
+  controlID: 14
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,10 +267,10 @@ MonoBehaviour:
     y: 0
     width: 1163
     height: 503
-  m_MinSize: {x: 610, y: 222}
-  m_MaxSize: {x: 12010, y: 4022}
+  m_MinSize: {x: 604, y: 222}
+  m_MaxSize: {x: 12004, y: 4022}
   vertical: 0
-  controlID: 43
+  controlID: 15
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -286,9 +286,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 202
+    x: 200
     y: 0
-    width: 536
+    width: 204
     height: 503
   m_MinSize: {x: 204, y: 222}
   m_MaxSize: {x: 4004, y: 4022}
@@ -363,20 +363,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/backpack/textures
+    - Assets/module-omicron-master/CAVE2/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/backpack/textures
+  - Assets/module-omicron-master/CAVE2/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/vtorre24/Documents/GitHub/CS427Project/Intro
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 70490000
-    m_LastClickedID: 18800
-    m_ExpandedIDs: 000000006a2f0000ce320000f23200006e49000000ca9a3b
+    m_SelectedIDs: 58340000
+    m_LastClickedID: 13400
+    m_ExpandedIDs: 000000006a2f00000433000028330000643300002834000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -404,7 +404,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006a2f0000
+    m_ExpandedIDs: 000000006a2f0000043300002833000028340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -432,7 +432,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000be4b00000000000064490000
+    m_ExpandedInstanceIDs: c6230000be4b00000000000064490000f6310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -521,29 +521,29 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 83
-    width: 202
+    width: 200
     height: 484
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 7a9bffffac9bffffb29bffff1eeaffff20eaffff6afbffff
+      m_SelectedIDs: a2afffff
+      m_LastClickedID: -20574
+      m_ExpandedIDs: 68fbffff6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: CAVE2-Manager
-        m_OriginalName: CAVE2-Manager
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -1176
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -574,9 +574,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 202
+    x: 200
     y: 83
-    width: 534
+    width: 202
     height: 484
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
@@ -589,9 +589,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -6.0076294, y: 1.6709604, z: -14.025883}
+    m_Target: {x: -5.899994, y: 21.4, z: 110.5}
     speed: 2
-    m_Value: {x: -6.0076294, y: 1.6709604, z: -14.025883}
+    m_Value: {x: -5.899994, y: 21.4, z: 110.5}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -620,17 +620,17 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.29020846, y: -0.5130266, z: 0.18959819, w: 0.7852642}
+    m_Target: {x: 0.17737892, y: 0.04367857, z: -0.007881463, w: 0.9831428}
     speed: 2
-    m_Value: {x: 0.2902078, y: -0.51302546, z: 0.18959776, w: 0.7852624}
+    m_Value: {x: 0.17737867, y: 0.043678507, z: -0.007881451, w: 0.98314136}
   m_Size:
-    m_Target: 1.6977085
+    m_Target: 815.7571
     speed: 2
-    m_Value: 1.8353605
+    m_Value: 815.7571
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.49748743
@@ -673,9 +673,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 738
+    x: 404
     y: 83
-    width: 423
+    width: 757
     height: 484
   m_ViewDataDictionary: {fileID: 0}
   m_VSyncEnabled: 0
@@ -689,8 +689,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -211.5
-    m_HBaseRangeMax: 211.5
+    m_HBaseRangeMin: -378.5
+    m_HBaseRangeMax: 378.5
     m_VBaseRangeMin: -233.5
     m_VBaseRangeMax: 233.5
     m_HAllowExceedBaseRangeMin: 1
@@ -710,25 +710,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 423
+      width: 757
       height: 467
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 211.5, y: 233.5}
+    m_Translation: {x: 378.5, y: 233.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -211.5
+      x: -378.5
       y: -233.5
-      width: 423
+      width: 757
       height: 467
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 846, y: 968}
+  m_LastWindowPixelSize: {x: 1514, y: 968}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
