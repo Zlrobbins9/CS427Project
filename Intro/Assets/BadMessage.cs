@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BadMessage : MonoBehaviour
 {
+    public bool breathingActive = false;
+    public int threshold = 20;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,25 @@ public class BadMessage : MonoBehaviour
     void Update()
     {
         Vector3 pos = GameObject.Find("Main Camera").transform.position;
+        if (pos.z >= threshold || Input.GetKey("z"))
+        {
+            breathingActive = true;
+        }
+        
         this.transform.position = new Vector3(pos.x, pos.y, pos.z+3);
-        transform.Translate(0, 0, 2);
+
+        if (breathingActive)
+        {
+            
+            if (Input.GetKey("c"))
+            {
+
+                this.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+            }
+            else if (Input.GetKey("v"))
+            {
+                this.transform.localScale += new Vector3(-0.1f, -0.1f, -0.1f);
+            }
+        }
     }
 }
