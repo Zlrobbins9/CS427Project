@@ -103,6 +103,7 @@
     <Compile Include="Assets\module-omicron-master\CAVE2\Scripts\Examples\GrabbableObject.cs" />
     <Compile Include="Assets\module-omicron-master\CAVE2\Scripts\Examples\HoverOverIndicator.cs" />
     <Compile Include="Assets\module-omicron-master\CAVE2\Scripts\Examples\MocapAdvUpdater.cs" />
+    <Compile Include="Assets\module-omicron-master\CAVE2\Scripts\Examples\MovableWord.cs" />
     <Compile Include="Assets\module-omicron-master\CAVE2\Scripts\Examples\ObjectTagCounter.cs" />
     <Compile Include="Assets\module-omicron-master\CAVE2\Scripts\Examples\PrecisionTransformModifier.cs" />
     <Compile Include="Assets\module-omicron-master\CAVE2\Scripts\Examples\SimpleWalkController.cs" />
