@@ -5,9 +5,9 @@ using UnityEngine;
 public class ZipperTrigger : MonoBehaviour
 {
    public AudioClip mySound;
-void OnTriggerEnter (ZipperOpen other)
+void OnTriggerEnter (Collider other)
 	{
-	if(/*other.gameObject.tag =="Wand"*/Input.GetKey("z"))
+	if(other.gameObject.tag =="Wand")
 		{
 				GetComponent<AudioSource> ().PlayOneShot (mySound);
 		}
