@@ -30,12 +30,12 @@ public class BadMessage : MonoBehaviour
             if (breathingActive)
             {
 
-                if (Input.GetKey("c"))
+                if (Input.GetKey("c") || CAVE2.GetButtonDown(CAVE2.Button.ButtonLeft))
                 {
 
                     this.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
                 }
-                else if (Input.GetKey("v"))
+                else if (Input.GetKey("v") || CAVE2.GetButtonDown(CAVE2.Button.ButtonRight))
                 {
                     this.transform.localScale += new Vector3(-0.1f, -0.1f, -0.1f);
                 }

@@ -113,7 +113,7 @@ public class FloorPuzzleController : MonoBehaviour
     void GameEnd()
     {
         Debug.Log("Game Over, end state is " + gameState);
-        if (gameState.Contains("Lost") && Input.GetKeyDown("v")) //game is lost, offer option to reset (win does not get to)
+        if (gameState.Contains("Lost") && (Input.GetKeyDown("v") || CAVE2.GetButtonDown(CAVE2.Button.ButtonUp))) //game is lost, offer option to reset (win does not get to)
         {
             Debug.Log("beginning reset...");
             //disable the three 
