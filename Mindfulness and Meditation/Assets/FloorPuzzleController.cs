@@ -10,20 +10,30 @@ public class FloorPuzzleController : MonoBehaviour
     string p3Str = "N/A";
     string gameState = "Playing";
     bool isReset = false;
-    int timer = 0;
-    string[] stringList = { "Play video games", "Eat dinner", "Take a phone break", "Studying (1)", "Studying (2)", "Studying (3)" };
-    GameObject[] objList= new GameObject[6];
+    int loseVal = -5;
+    string[] taskStrList = { "Play video games", "Eat dinner", "Take a phone break", "Studying (1)", "Studying (2)", "Studying (3)" };
+    string[] goalStrList = { "You didn't do any work", "You didn't do enough work", "You used your schedule and got all the work done without burning out! good job!", "You pushed yourself too hard and burnt out before finishing" };
+    GameObject[] taskObjList= new GameObject[6];
+    GameObject[] goalObjList = new GameObject[4];
     void Start()
     {
         for(int i = 0; i < 6; i++)
         {
-            objList[i] = GameObject.Find(stringList[i]);
+            taskObjList[i] = GameObject.Find(taskStrList[i]);
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            goalObjList[i] = GameObject.Find(goalStrList[i]);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        foreach (GameObject i in goalObjList)
+        {
+            i.SetActive(false);
+        }
         if (gameState.Equals("Playing"))
         {
             if (!p1Str.Equals("N/A") && !p2Str.Equals("N/A") && !p3Str.Equals("N/A")) //All three platforms have words on them
@@ -67,6 +77,8 @@ public class FloorPuzzleController : MonoBehaviour
                     Debug.Log("ERROR: recieving impossible value as a result of the floor puzzle. Impossible value:" + workValue);
                 }
 
+                loseVal = workValue;
+
                 if (isReset == false)
                 {
                     Debug.Log("resetting letters... gameState is " + gameState);
@@ -90,7 +102,11 @@ public class FloorPuzzleController : MonoBehaviour
         }
         else if(gameState.Contains("Lost")) //lose screen
         {
+            goalObjList[loseVal].SetActive(true);
             GameEnd();
+        }else if (gameState.Equals("Won"))
+        {
+            goalObjList[loseVal].SetActive(true);
         }
     }
 
@@ -107,7 +123,7 @@ public class FloorPuzzleController : MonoBehaviour
 
             // by this point, all words should be disabled
 
-            foreach (GameObject i in objList)
+            foreach (GameObject i in taskObjList)
             {
                 i.SetActive(true);
             }
@@ -117,7 +133,6 @@ public class FloorPuzzleController : MonoBehaviour
             p1Str = "N/A";
             p2Str = "N/A";
             p3Str = "N/A";
-            timer = 1;
             gameState = "Playing";
             isReset = false;
             Debug.Log("after reset, p1str is " + p1Str);
@@ -130,7 +145,7 @@ public class FloorPuzzleController : MonoBehaviour
         if (!isReset)
         {
             Debug.Log("RemoveUnusedLetters is running with isReset as false...");
-            foreach (GameObject i in objList)
+            foreach (GameObject i in taskObjList)
             {
                 if (i.GetComponent<GrabbableObject>().enabled) //if this is true, the word has not had its Grabbable object removed
                 {

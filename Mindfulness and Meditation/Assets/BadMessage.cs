@@ -39,6 +39,11 @@ public class BadMessage : MonoBehaviour
                 {
                     this.transform.localScale += new Vector3(-0.1f, -0.1f, -0.1f);
                 }
+
+                if (this.transform.localScale.x < 0)
+                {
+                    Destroy(this.gameObject);
+                }
             }
         }
         else if (GameObject.Find("Bag").GetComponent<ZipperTrigger>().isOpen)
