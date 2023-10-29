@@ -5,6 +5,7 @@ using UnityEngine;
 public class WordFloor : MonoBehaviour
 {
     string firstWordToCollide = "N/A";
+    bool wordConnected = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,25 @@ public class WordFloor : MonoBehaviour
         if (GameObject.Find("platform2").GetComponent<FloorPuzzleController>().HasLost())
         {
             firstWordToCollide = "N/A";
+            wordConnected = false;
         }
+
+        if (!firstWordToCollide.Equals("N/A"))
+        {
+            if (!wordConnected)
+            {
+
+                if (GameObject.Find(firstWordToCollide).GetComponent<GrabbableObject>().IsGrabbed() == false)
+                {
+                    GameObject.Find(firstWordToCollide).GetComponent<Transform>().position += new Vector3(0f, 0f, -0.3f);
+                    GameObject.Find(firstWordToCollide).GetComponent<GrabbableObject>().enabled = false;
+                    GameObject.Find(firstWordToCollide).GetComponent<Rigidbody>().isKinematic = true;
+                    wordConnected = true; // the word is connected to the board
+                }
+                
+            }
+        }
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -27,16 +46,20 @@ public class WordFloor : MonoBehaviour
         {
             Debug.Log("First collision detected! It was with: " + collision.gameObject.name);
             firstWordToCollide = collision.gameObject.name;
-            //TODO: take away the words' grabbable script
-            GameObject.Find(firstWordToCollide).GetComponent<Transform>().position += new Vector3(0f,2f,0f);
-            GameObject.Find(firstWordToCollide).GetComponent<GrabbableObject>().enabled = false;
-            GameObject.Find(firstWordToCollide).GetComponent<Rigidbody>().isKinematic = true;
         }
         
     }
 
     public string ReturnPhrase()
     {
-        return firstWordToCollide;
+        if (!wordConnected)
+        {
+            return "N/A";
+        }
+        else
+        {
+            return firstWordToCollide;
+        }
+        
     }
 }
