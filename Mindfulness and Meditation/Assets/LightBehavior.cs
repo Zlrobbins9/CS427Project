@@ -14,7 +14,7 @@ public class LightBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("ycdt (3)").GetComponent<BadMessage>().breathingActive == true)
+        if (GameObject.Find("RoomWord12").GetComponent<BadMessage>().breathingActive == true)
         {
             myLight.intensity = 0.5f;
         }
