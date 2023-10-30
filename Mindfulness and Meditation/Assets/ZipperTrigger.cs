@@ -6,8 +6,10 @@ public class ZipperTrigger : MonoBehaviour
 {
 	public AudioClip mySound;
 	public bool isOpen = false;
-	bool wordsSpawned = false;
-	public GameObject[] objList = new GameObject[29];
+	bool meanWordsSpawned = false;
+	bool niceWordsSpawned = false;
+	public GameObject[] meanWordList;
+	public GameObject[] niceWordList;
 
 	void Start()
     {
@@ -16,7 +18,7 @@ public class ZipperTrigger : MonoBehaviour
 	}
 	void OnTriggerEnter (Collider other)
 	{
-		if(other.gameObject.tag =="Wand") //collision occured
+		if(other.gameObject.tag =="Wand" && !isOpen) //collision occured
 		{
 			GetComponent<AudioSource> ().PlayOneShot (mySound);
 			isOpen = true;
@@ -25,13 +27,33 @@ public class ZipperTrigger : MonoBehaviour
 
 	void Update()
     {
-        if (isOpen && !wordsSpawned)
+        if (isOpen && !meanWordsSpawned)
         {
-            foreach (GameObject i in objList)
+			Debug.Log("spawning mean words...");
+			foreach (GameObject i in meanWordList)
             {
 				i.SetActive(true);
             }
-			wordsSpawned = true;
+			meanWordsSpawned = true;
         }
+
+        if (GameObject.Find("platform2").GetComponent<CalendarPuzzleController>().isTeleported && !niceWordsSpawned)
+        {
+			Debug.Log("despawning mean words...");
+			foreach (GameObject i in niceWordList)
+			{
+				i.SetActive(true);
+			}
+			foreach (GameObject i in meanWordList)
+			{
+                if (i != null)
+                {
+					i.SetActive(false);
+				}
+				
+			}
+			niceWordsSpawned = true;
+
+		}
     }
 }

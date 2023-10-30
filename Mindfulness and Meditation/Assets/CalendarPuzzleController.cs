@@ -2,29 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloorPuzzleController : MonoBehaviour
+public class CalendarPuzzleController : MonoBehaviour
 {
     // Start is called before the first frame update
     string p1Str = "N/A";
     string p2Str = "N/A";
     string p3Str = "N/A";
     string gameState = "Playing";
+    public bool isTeleported = false;
     bool isReset = false;
     int loseVal = -5;
-    string[] taskStrList = { "Play video games", "Eat dinner", "Take a phone break", "Studying (1)", "Studying (2)", "Studying (3)" };
-    string[] goalStrList = { "You didn't do any work", "You didn't do enough work", "You used your schedule and got all the work done without burning out! good job!", "You pushed yourself too hard and burnt out before finishing" };
-    GameObject[] taskObjList= new GameObject[6];
-    GameObject[] goalObjList = new GameObject[4];
+    public GameObject[] taskObjList;
+    public GameObject[] goalObjList;
     void Start()
     {
-        for(int i = 0; i < 6; i++)
-        {
-            taskObjList[i] = GameObject.Find(taskStrList[i]);
-        }
-        for (int i = 0; i < 4; i++)
-        {
-            goalObjList[i] = GameObject.Find(goalStrList[i]);
-        }
     }
 
     // Update is called once per frame
@@ -89,15 +80,15 @@ public class FloorPuzzleController : MonoBehaviour
             }
             if (p1Str.Equals("N/A"))
             {
-                p1Str = GameObject.Find("platform1").GetComponent<WordFloor>().ReturnPhrase();
+                p1Str = GameObject.Find("platform1").GetComponent<WordPlatform>().ReturnPhrase();
             }
             if (p2Str.Equals("N/A"))
             {
-                p2Str = GameObject.Find("platform2").GetComponent<WordFloor>().ReturnPhrase(); //this script exists inside platform 2
+                p2Str = GameObject.Find("platform2").GetComponent<WordPlatform>().ReturnPhrase(); //this script exists inside platform 2
             }
             if (p3Str.Equals("N/A"))
             {
-                p3Str = GameObject.Find("platform3").GetComponent<WordFloor>().ReturnPhrase();
+                p3Str = GameObject.Find("platform3").GetComponent<WordPlatform>().ReturnPhrase();
             }
         }
         else if(gameState.Contains("Lost")) //lose screen
@@ -107,6 +98,13 @@ public class FloorPuzzleController : MonoBehaviour
         }else if (gameState.Equals("Won"))
         {
             goalObjList[loseVal].SetActive(true);
+
+            if (!isTeleported)
+            {
+                GameObject.Find("CAVE2-PlayerController").transform.position = new Vector3(-3f, 0f, -25f);
+                isTeleported = true;
+            }
+            
         }
     }
 

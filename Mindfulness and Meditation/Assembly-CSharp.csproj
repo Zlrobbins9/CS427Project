@@ -65,8 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BadMessage.cs" />
+    <Compile Include="Assets\CalendarPuzzleController.cs" />
     <Compile Include="Assets\ClassMessage.cs" />
-    <Compile Include="Assets\FloorPuzzleController.cs" />
     <Compile Include="Assets\LightBehavior.cs" />
     <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CAVE2Display.cs" />
     <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CAVE2RemoteFineAdjustment.cs" />
@@ -202,7 +202,7 @@
     <Compile Include="Assets\module-omicron-master\Tests\Mocap\Mocap3DText.cs" />
     <Compile Include="Assets\module-omicron-master\Tests\Mocap\OmicronMocapObject.cs" />
     <Compile Include="Assets\module-omicron-master\Tests\Touch\SimpleCanvasTouch.cs" />
-    <Compile Include="Assets\WordFloor.cs" />
+    <Compile Include="Assets\WordPlatform.cs" />
     <Compile Include="Assets\WordReset.cs" />
     <Compile Include="Assets\ZipperTrigger.cs" />
     <None Include="Assets\module-omicron-master\Shaders\Transparent-InvisibleShadowCaster.shader" />

@@ -15,18 +15,28 @@ public class LightBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (anchor.GetComponent<BadMessage>().breathingActive == true)
+
+        if (anchor != null)
         {
-            myLight.intensity = 0.5f;
-        }
-        else if(GameObject.Find("Bag").GetComponent<ZipperTrigger>().isOpen) //Bag
-        {
-            myLight.intensity = 0;
+            if (anchor.GetComponent<BadMessage>().breathingActive == true)
+            {
+                myLight.intensity = 0.5f;
+            }
+            else if (GameObject.Find("Bag").GetComponent<ZipperTrigger>().isOpen) //Bag has been opened
+            {
+                myLight.intensity = 0;
+            }
+            else
+            {
+                myLight.intensity = 0.5f;
+            }
+
         }
         else
         {
-            myLight.intensity = 0.5f;
+            myLight.intensity = 0.75f;
         }
+        
         
     }
 }

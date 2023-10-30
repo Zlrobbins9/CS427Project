@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WordFloor : MonoBehaviour
+public class WordPlatform : MonoBehaviour
 {
     string firstWordToCollide = "N/A";
     bool wordConnected = false;
@@ -15,7 +15,7 @@ public class WordFloor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("platform2").GetComponent<FloorPuzzleController>().HasLost())
+        if (GameObject.Find("platform2").GetComponent<CalendarPuzzleController>().HasLost())
         {
             firstWordToCollide = "N/A";
             wordConnected = false;
