@@ -6,36 +6,31 @@ public class BadMessage : MonoBehaviour
 {
     public bool breathingActive = false;
     public int threshold = 20;
-    bool followPlayer = false;
+    GameObject wand;
     // Start is called before the first frame update
     void Start()
     {
+        wand = GameObject.Find("Wand");
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
-        if (followPlayer)
-        {
-            Vector3 pos = GameObject.Find("Main Camera").transform.position;
-            if (pos.z >= threshold || Input.GetKey("z"))
+            Vector3 charPos = GameObject.Find("Main Camera").transform.position;
+            if (charPos.z >= threshold)
             {
                 breathingActive = true;
             }
 
-            this.transform.position = new Vector3(pos.x, pos.y, pos.z + 3);
 
             if (breathingActive)
             {
 
-                if (Input.GetKey("c") || CAVE2.GetButtonDown(CAVE2.Button.ButtonLeft))
+                if (Input.GetKey("c") || CAVE2.GetButtonDown(CAVE2.Button.ButtonLeft) || (wand.transform.eulerAngles.y > 50 && wand.transform.eulerAngles.y < 60))
                 {
-
                     this.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
                 }
-                else if (Input.GetKey("v") || CAVE2.GetButtonDown(CAVE2.Button.ButtonRight))
+                else if (Input.GetKey("v") || CAVE2.GetButtonDown(CAVE2.Button.ButtonRight) || (wand.transform.eulerAngles.x > 50 && wand.transform.eulerAngles.x < 60))
                 {
                     this.transform.localScale += new Vector3(-0.1f, -0.1f, -0.1f);
                 }
@@ -45,10 +40,5 @@ public class BadMessage : MonoBehaviour
                     Destroy(this.gameObject);
                 }
             }
-        }
-        else if (GameObject.Find("Bag").GetComponent<ZipperTrigger>().isOpen)
-        {
-            followPlayer = true;
-        }
     }
 }
