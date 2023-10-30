@@ -1438,7 +1438,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5e4e3c1f4aaf848eca3d695a1ae221c4, type: 2}
+  - {fileID: 2100000, guid: 8b6bd9e31cd1f4cf6a42a52a11848a32, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9645,10 +9645,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CAVE2-PlayerController
       objectReference: {fileID: 0}
-    - target: {fileID: 1000013763121972, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
-      propertyPath: m_TagString
-      value: Wand
-      objectReference: {fileID: 0}
     - target: {fileID: 4000012806552110, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.17
@@ -9717,6 +9713,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013763121972, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
+      propertyPath: m_TagString
+      value: Wand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
