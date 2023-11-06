@@ -44,6 +44,7 @@ public class ZipperTrigger : MonoBehaviour
 			{
 				i.SetActive(true);
 			}
+			
 			foreach (GameObject i in meanWordList)
 			{
                 if (i != null)
