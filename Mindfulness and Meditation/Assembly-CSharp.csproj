@@ -204,6 +204,7 @@
     <Compile Include="Assets\module-omicron-master\Tests\Mocap\Mocap3DText.cs" />
     <Compile Include="Assets\module-omicron-master\Tests\Mocap\OmicronMocapObject.cs" />
     <Compile Include="Assets\module-omicron-master\Tests\Touch\SimpleCanvasTouch.cs" />
+    <Compile Include="Assets\ReflectSoundPlay.cs" />
     <Compile Include="Assets\ScheduleDoorScript.cs" />
     <Compile Include="Assets\WordPlatform.cs" />
     <Compile Include="Assets\WordReset.cs" />

@@ -24,7 +24,7 @@ public class LightBehavior : MonoBehaviour
             }
             else if (GameObject.Find("Bag").GetComponent<ZipperTrigger>().isOpen) //Bag has been opened
             {
-                myLight.intensity = 0;
+                myLight.intensity = -5;
             }
             else
             {

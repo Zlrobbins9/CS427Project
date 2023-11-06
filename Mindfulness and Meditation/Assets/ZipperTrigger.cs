@@ -20,7 +20,7 @@ public class ZipperTrigger : MonoBehaviour
 	{
 		if(other.gameObject.tag =="Wand" && !isOpen) //collision occured
 		{
-			GetComponent<AudioSource> ().PlayOneShot (mySound);
+			GetComponent<AudioSource>().PlayOneShot(mySound);
 			isOpen = true;
 		}
 	}
@@ -44,6 +44,7 @@ public class ZipperTrigger : MonoBehaviour
 			{
 				i.SetActive(true);
 			}
+
 			foreach (GameObject i in meanWordList)
 			{
                 if (i != null)
