@@ -16,8 +16,9 @@ public class ReflectSoundPlay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!audioPlayed && GameObject.Find("Main Camera").transform.position.z > 25 && GameObject.Find("platform1").GetComponent<CalendarPuzzleController>().isTeleported)//todo: add condition) //collision occured
+        if (!audioPlayed && GameObject.Find("Main Camera").transform.position.z >= 25 && GameObject.Find("platform1").GetComponent<CalendarPuzzleController>().isTeleported)//todo: add condition) //collision occured
         {
+            Debug.Log("audio played!!");
             GetComponent<AudioSource>().PlayOneShot(mySound);
             audioPlayed = true;
         }
