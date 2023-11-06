@@ -2273,8 +2273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a57be89adefdd4db29ca3d85a5ddb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySound1: {fileID: 0}
-  mySound2: {fileID: 0}
+  mySound: {fileID: 8300000, guid: 1db162af8e594794bbd4cdd406864f60, type: 3}
   isOpen: 0
   meanWordList:
   - {fileID: 1641386694}
@@ -8650,6 +8649,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df107f0219629749a78afce5918e482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &763076647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763076645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e05d624a27d60240abe664044eb9599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySound: {fileID: 8300000, guid: a838665f76c565041bd4da6e79455cf4, type: 3}
 --- !u!1 &766223399
 GameObject:
   m_ObjectHideFlags: 0
@@ -11297,7 +11309,7 @@ Transform:
   m_LocalScale: {x: 18.230322, y: 6.103058, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 105
+  m_RootOrder: 106
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1095922157 stripped
 GameObject:
@@ -12809,7 +12821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012806552110, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.55
+      value: 59.7
       objectReference: {fileID: 0}
     - target: {fileID: 4000012806552110, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
       propertyPath: m_LocalRotation.x
@@ -24339,7 +24351,7 @@ Transform:
   m_LocalScale: {x: 4.1, y: 4.9, z: 0.28383}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 104
+  m_RootOrder: 105
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2139288391
 GameObject:

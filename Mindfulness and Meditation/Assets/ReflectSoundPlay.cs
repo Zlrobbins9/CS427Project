@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Instruct3 : MonoBehaviour
+public class ReflectSoundPlay : MonoBehaviour
 {
     bool audioPlayed = false;
     public AudioClip mySound;
