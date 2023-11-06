@@ -68,6 +68,7 @@
     <Compile Include="Assets\CalendarPuzzleController.cs" />
     <Compile Include="Assets\ClassMessage.cs" />
     <Compile Include="Assets\InhaleExhale.cs" />
+    <Compile Include="Assets\Instuct1.cs" />
     <Compile Include="Assets\LightBehavior.cs" />
     <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CAVE2Display.cs" />
     <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CAVE2RemoteFineAdjustment.cs" />
