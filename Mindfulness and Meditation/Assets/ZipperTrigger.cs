@@ -52,6 +52,8 @@ public class ZipperTrigger : MonoBehaviour
 				}
 				
 			}
+
+
 			niceWordsSpawned = true;
 
 		}

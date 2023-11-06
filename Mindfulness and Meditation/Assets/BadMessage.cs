@@ -28,11 +28,11 @@ public class BadMessage : MonoBehaviour
         {
             lastState = breathState;
 
-            if (Input.GetKey("c") || CAVE2.GetButtonDown(CAVE2.Button.ButtonLeft) || (wand.transform.eulerAngles.y > 50 && wand.transform.eulerAngles.y < 60))
+            if (Input.GetKey("c") || CAVE2.GetButtonDown(CAVE2.Button.ButtonLeft) /*|| (wand.transform.eulerAngles.y > 50 && wand.transform.eulerAngles.y < 60)*/)
             {
                 breathState = "in";
             }
-            else if (Input.GetKey("v") || CAVE2.GetButtonDown(CAVE2.Button.ButtonRight) || (wand.transform.eulerAngles.x > 50 && wand.transform.eulerAngles.x < 60))
+            else if (Input.GetKey("v") || CAVE2.GetButtonDown(CAVE2.Button.ButtonRight) /*|| (wand.transform.eulerAngles.x > 50 && wand.transform.eulerAngles.x < 60)*/)
             {
                 breathState = "out";
             }
