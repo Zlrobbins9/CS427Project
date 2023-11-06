@@ -78,6 +78,7 @@ public class CalendarPuzzleController : MonoBehaviour
 
                 }
             }
+
             if (p1Str.Equals("N/A"))
             {
                 p1Str = GameObject.Find("platform1").GetComponent<WordPlatform>().ReturnPhrase();

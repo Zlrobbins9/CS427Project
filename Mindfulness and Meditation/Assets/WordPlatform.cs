@@ -15,7 +15,7 @@ public class WordPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("platform2").GetComponent<CalendarPuzzleController>().HasLost())
+        if (GameObject.Find("platform1").GetComponent<CalendarPuzzleController>().HasLost())
         {
             firstWordToCollide = "N/A";
             wordConnected = false;

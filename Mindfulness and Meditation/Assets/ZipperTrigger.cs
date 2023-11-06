@@ -37,7 +37,7 @@ public class ZipperTrigger : MonoBehaviour
 			meanWordsSpawned = true;
         }
 
-        if (GameObject.Find("platform2").GetComponent<CalendarPuzzleController>().isTeleported && !niceWordsSpawned)
+        if (GameObject.Find("platform1").GetComponent<CalendarPuzzleController>().isTeleported && !niceWordsSpawned)
         {
 			Debug.Log("despawning mean words...");
 			foreach (GameObject i in niceWordList)
