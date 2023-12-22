@@ -1,1 +1,2 @@
-test
+In this Repository is Our Final Project for CS 427/DES 350. It is designed to be compatible with the CAVE2 System. This interactive experience is designed to help students with learning disabilities learn generally applicable skills that help them in the classroom, such as controled breathing, time management, and combatting negative slef-talk. For more information, please check out https://docs.google.com/document/d/1hEMHsYu3Taofu6cHCDHJ9B6bIW-0vX4ZCEKX2bmZeQA/edit?usp=sharing
+
